@@ -2,7 +2,7 @@
 #!/bin/bash
 #pipeline for mapping EMS mutants
 #variables file
-trait=HD
+trait=FT
 #define the path to Java java-1.8.0 version
 java='~/anaconda3/bin/java'
 
