@@ -22,14 +22,14 @@ Always use this GitHb README.txt version (and not the Plant Physiology one).
 
 2. Place the Simple folder in your home directory.
 
-3. Rename your fastq files as follow. For the mutant and WT bulks, the names should have the following formats, X.mut.RY.fastq and X.wt.RY.fastq, respectively (note the dots); X is the line name (but you can also omit the "X." part of the name) and "Y" is either 1 or 2. E.g., if you sent a pair-end mutant bulk DNA and single-end WT bulk DNA, you could name the three files as follow: lineX.mut.R1.fastq, lineX.mut.R2.fastq and lineX.wt.R1.fastq (mut.R1.fastq, mut.R2.fastq and wt.R1.fastq are also OK). Use only letters and underscores.
+3. Rename your fastq files as follow. For the mutant and WT bulks, the names should have the following formats, trait_X.mut.RY.fastq and trait_X.wt.RY.fastq, respectively (note the dots); trait represent any trait like FT (flowering time), X is the line name (but you can also omit the "X." part of the name) and "Y" is either 1 or 2. E.g., if you sent a pair-end mutant bulk DNA and single-end WT bulk DNA, you could name the three files as follow: FT_lineX.mut.R1.fastq, FT_lineX.mut.R2.fastq and FT_lineX.wt.R1.fastq (the wild_cards for recognize files is : FT*mut*, and FT*wt*). Use only letters and underscores.
 
 4. Place the renamed fastq files in the fastq folder located in the Simple folder.
 
 5. Open the folder "scripts" inside Simple; open the data_base.txt file. Locate your species in the first column and copy it.
 Open the file simple_variables.sh inside the folder "scripts" with a text editor and paste the species name you've just copied to replace "Arabidopsis_thaliana" as the species name (e.g., this line should look like: my_species=Arabidopsis_thaliana or my_species=Oryza_sativa_Japonica). Save the file.
 
-6. If you would like to have specific names for your output files, open the simple_variables.sh file and change the line variable from “EMS” to your line name.  Letters and underscores only. This name will be the prefix to all of your file names in the output folder.
+6. Assign a trait name that correspond to your renamed fastq file in simple_variables.sh. For this instance, it's "FT". trait=FT.
 
 7. In the same file, simple_variables.sh choose the path to your Java1.8 executable in line 6. Since some computers and servers have more than one Java running, Java1.8 might not be the default version. On my server it is /usr/bin/java.
 
@@ -55,7 +55,7 @@ Open the file simple_variables.sh inside the folder "scripts" with a text editor
 
 #######################Example#########################
 
-Let's say that you want to perform a forward genetic screen and find  mutations that promote wings development in dragons. You collect 5000 dragon eggs, mutagenize them and identify an M2 mutant line with some individual dragons that have no wings. Next, You extract two DNA bulks, one from the wingless dragons and one from their flying siblings and send each DNA prep for PE (paired ends) WGS (you can also have a SE but make sure you have approximately 40x coverage). Once you receive your results, unzip the files, rename them fly.wt.R1.fq, fly.wt.R2.fq, wingless.mut.R1.fq, wingless.mut.R2.fq (fq and fastq suffix are both OK) and place these files in the fastq folder. Open the file data_base.txt in the folder scripts and copy the species name, i.e., Dragon_fly to replace Arabidopsis_thaliana in the simple_variables.sh file (located in the same folder). Type the path to the Java1.8 executable. Since you noticed that in this M2 mutant line approximately 0.75 of the dragons have no wings, you assume the mutation is dominant and change the string "recessive" to dominant in the simple_variables.sh file (line 13). Follow the instructions 9-14 above to complete the process. It is that simple.
+Let's say that you want to perform a forward genetic screen and find  mutations that promote wings development in dragons. You collect 5000 dragon eggs, mutagenize them and identify an M2 mutant line with some individual dragons that have no wings. Next, You extract two DNA bulks, one from the wingless dragons and one from their flying siblings and send each DNA prep for PE (paired ends) WGS (you can also have a SE but make sure you have approximately 40x coverage). Once you receive your results, unzip the files, rename them wing_have.wt.R1.fq, wing_have.wt.R2.fq, wing_no.mut.R1.fq, wing_no.mut.R2.fq (fq and fastq suffix are both OK) and place these files in the fastq folder. Open the file data_base.txt in the folder scripts and copy the species name, i.e., Dragon_fly to replace Arabidopsis_thaliana in the simple_variables.sh file (located in the same folder). Type the path to the Java1.8 executable. Since you noticed that in this M2 mutant line approximately 0.75 of the dragons have no wings, you assume the mutation is dominant and change the string "recessive" to dominant in the simple_variables.sh file (line 13). Follow the instructions 9-14 above to complete the process. It is that simple.
 
 
 
