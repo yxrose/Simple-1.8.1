@@ -18,7 +18,7 @@ Always use this GitHb README.txt version (and not the Plant Physiology one).
 
 ##### RUNNING SIMPLE #####
 
-1. Download and unpack the Simple package from the following link: https://github.com/wacguy/Simple-1.8.1 by pressing the green link: "Clone or download"
+1. Download and unpack the Simple package from the following link: https://github.com/yxrose/Simple-1.8.1.git (A fork and revised version) by pressing the green link: "Clone or download"
 
 2. Place the Simple folder in your home directory.
 
