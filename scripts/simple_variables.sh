@@ -1,21 +1,20 @@
+
 #!/bin/bash
 #pipeline for mapping EMS mutants
 #variables file
-
+trait=HD
 #define the path to Java java-1.8.0 version
-java='/usr/bin/java'
+java='~/anaconda3/bin/java'
 
 #input files
-mut_files=fastq/*mut*
-wt_files=fastq/*wt*
+mut_files=fastq/${trait}*mut*
+wt_files=fastq/${trait}*wt*
 
 #output names
 mutation=recessive #change to dominant if the mutation is dominant
-line=EMS  ##if you prefer, change EMS to the name of your line.  Letters and underscores only.
-mut=EMS_mut 
-wt=EMS_wt 
 
-
-
-my_species=Arabidopsis_thaliana #paste your species name here to replace Arabidopsis_thaliana
+line=${trait}  ##if you prefer, change EMS to the name of your line.  Letters a\
+nd underscores only.
+mut=${line}_mut
+wt=${line}_wt
 
