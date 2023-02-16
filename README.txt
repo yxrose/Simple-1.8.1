@@ -47,7 +47,7 @@ Open the file simple_variables.sh inside the folder "scripts" with a text editor
 
 14. The script will run for a few hours up to a couple of days, depending on the size of your fastq files and the size of the genome you are working with. You will know it finished once the prompt shows the following colorful text: “Simple is done”.
 
-15. Output files (EMS might be the name of the prefix you chose above for your output file names).
+15. Output files (EMS might be the name of the prefix you chose above for your output file names. For example, FT.).
 	a. EMS.allSNPs.txt: All the SNPs that Simple found compared to the background genome, usually caused by the mutagenesis process.
 	b. EMS.candidates.txt: The genes that are likely to be the causal mutation; notice that there can be more than one gene due to linkage. Another case is that there are no genes. In this scenario, browse the EMS.allSNPs.txt file for genes with high score in the ratio column, that affect the protein (e.g., missense, stop_gained) and that have reasonable coverage (columns mut.ref, mut.alt, wt.ref and wt.alt).
 	c. EMS.Rplot_allele.pdf: Representation of the allelic distribution in the WT and mutant bulks. This file is useless and you can ignore it.
