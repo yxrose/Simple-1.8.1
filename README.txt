@@ -8,7 +8,7 @@ Always use this GitHb README.txt version (and not the Plant Physiology one).
 
 # Requires Java JKD 1.8 (8u131; current url: https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
 # Requires Curl
-# Requires ncurses-devel
+# Requires ncurses-devel (it's hard to install on CentOS Linux release 7.5.1804 withou root authorities)
 
 # Requires R and the following packages: ggplot2, reshape2 and ggrepel
 # requires Command Line Tools in Mac OS X (for instructions: https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a)
