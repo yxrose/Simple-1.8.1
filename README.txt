@@ -29,7 +29,7 @@ Always use this GitHb README.txt version (and not the Plant Physiology one).
 5. Open the folder "scripts" inside Simple; open the data_base.txt file. Locate your species in the first column and copy it.
 Open the file simple_variables.sh inside the folder "scripts" with a text editor and paste the species name you've just copied to replace "Arabidopsis_thaliana" as the species name (e.g., this line should look like: my_species=Arabidopsis_thaliana or my_species=Oryza_sativa_Japonica). Save the file.
 
-6. Assign a trait name that correspond to your renamed fastq file in simple_variables.sh. For this instance, it's "FT". trait=FT.
+6. In simple_variables.sh, assign a trait name that correspond to your renamed fastq file. For this instance, it's "FT". trait=FT.
 
 7. In the same file, simple_variables.sh choose the path to your Java1.8 executable in line 6. Since some computers and servers have more than one Java running, Java1.8 might not be the default version. On my server it is /usr/bin/java.
 
