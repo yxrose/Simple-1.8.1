@@ -31,7 +31,7 @@ Open the file simple_variables.sh inside the folder "scripts" with a text editor
 
 6. In simple_variables.sh, assign a trait name that correspond to your renamed fastq file. For this instance, it's "FT". trait=FT.
 
-7. In the same file, simple_variables.sh choose the path to your Java1.8 executable in line 6. Since some computers and servers have more than one Java running, Java1.8 might not be the default version. On my server it is /usr/bin/java.
+7. In the same file, simple_variables.sh choose the path to your Java1.8 executable in line 6. Note:This should be a absolute pathway start from root.
 
 8. If the mutation you are mapping is dominant, change the mutation from recessive to dominant in the simple_variables.sh file.
 
