@@ -10,6 +10,7 @@ Always use this GitHb README.txt version (and not the Plant Physiology one).
 # Requires Curl
 # Requires bwa
 # Requires samtools
+# Requires snpEff
 
 # Requires R and the following packages: ggplot2, reshape2 and ggrepel
 # requires Command Line Tools in Mac OS X (for instructions: https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a)
@@ -37,21 +38,21 @@ Open the file simple_variables.sh inside the folder "scripts" with a text editor
 
 9. Download your reference genome (both fasta and gff file ) to refs/ directory, and rename your genome file to be {species name}.fa, for example: Oryza_sativa_Japonica.
 
-10. Use snpEff software to make a local annotation database based on your {species name}.fa file. Look the manual of snpEff for detail.
+10. Use snpEff software to make a local annotation database based on your {species name}.fa file. Look the manual of snpEff for detail.Then open simple_variables.sh, assign you snpEff pathway to variable SNPEFF and assign you annotated genome database name to variable annDB.
 
-9. Open the Terminal application.
+11. Open the Terminal application.
 
-10. Type: cd ~/Simple. Press return.
+12. Type: cd ~/Simple. Press return.
 
-11. Type: chmod +x ./scripts/simple.sh. Press return.
+13. Type: chmod +x ./scripts/simple.sh. Press return.
 
-12. Type: ./scripts/simple.sh. Press return.
+14. Type: ./scripts/simple.sh. Press return.
 
-13. The last command will execute the program.
+15. The last command will execute the program.
 
-14. The script will run for a few hours up to a couple of days, depending on the size of your fastq files and the size of the genome you are working with. You will know it finished once the prompt shows the following colorful text: “Simple is done”.
+16. The script will run for a few hours up to a couple of days, depending on the size of your fastq files and the size of the genome you are working with. You will know it finished once the prompt shows the following colorful text: “Simple is done”.
 
-15. Output files (EMS might be the name of the prefix you chose above for your output file names. For example, FT.).
+17. Output files (EMS might be the name of the prefix you chose above for your output file names. For example, FT.).
 	a. EMS.allSNPs.txt: All the SNPs that Simple found compared to the background genome, usually caused by the mutagenesis process.
 	b. EMS.candidates.txt: The genes that are likely to be the causal mutation; notice that there can be more than one gene due to linkage. Another case is that there are no genes. In this scenario, browse the EMS.allSNPs.txt file for genes with high score in the ratio column, that affect the protein (e.g., missense, stop_gained) and that have reasonable coverage (columns mut.ref, mut.alt, wt.ref and wt.alt).
 	c. EMS.Rplot_allele.pdf: Representation of the allelic distribution in the WT and mutant bulks. This file is useless and you can ignore it.
