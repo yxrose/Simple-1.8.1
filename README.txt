@@ -35,6 +35,10 @@ Open the file simple_variables.sh inside the folder "scripts" with a text editor
 
 8. If the mutation you are mapping is dominant, change the mutation from recessive to dominant in the simple_variables.sh file.
 
+9. Download your reference genome (both fasta and gff file ) to refs/ directory, and rename your genome file to be {species name}.fa, for example: Oryza_sativa_Japonica.
+
+10. Use snpEff software to make a local annotation database based on your {species name}.fa file. Look the manual of snpEff for detail.
+
 9. Open the Terminal application.
 
 10. Type: cd ~/Simple. Press return.
