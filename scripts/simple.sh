@@ -134,7 +134,9 @@ $java -jar programs/GenomeAnalysisTK.jar -R $fa -T VariantsToTable -V output/$li
 
 #snpEff
 #$java -jar programs/snpEff/snpEff.jar -c programs/snpEff/snpEff.config $snpEffDB -s output/snpEff_summary.html output/$line.hc.vcf > output/$line.se.vcf
-$java -Xmx4g -jar ~/software/SNPEFF/snpEff/snpEff.jar -v Japonica7.0 output/$line.hc.vcf >  output/$line.se.vcf
+
+$java -Xmx4g -jar $SNPEFF -v $annName output/$line.hc.vcf >  output/$line.se.vcf
+
 ###%%%%%%% JEN %%%%%%%%%%
 #and finally, get only the SNPs that are ref/ref or ref/alt in the wt bulk and alt/alt in the mut bulk for recessive mutations
 #for the case of dominant mutations should be ref/ref in the wt bulk and ref/alt or alt/alt in the mutant bulk
